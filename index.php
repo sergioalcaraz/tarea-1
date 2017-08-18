@@ -18,7 +18,6 @@
             <button id="btn-reiniciar" class="btn-juego" style="display: none;">Volver a jugar</button>
         </div>
         <script src="plugins/jquery-3.1.0.min.js"></script>
-        <script src="js/tateti.js"></script>
         <script src="js/tablero.js"></script>
         <script>
             new Tablero().eventoBtnIniciar()

@@ -7,19 +7,39 @@ namespace MyApp;
 class TatetiJuego
 {
     /**
-     *
+     * Tablero de juego
      * @var array[]
      */
     public $tablero;
 
+    /**
+     * Dimension del tablero NxN
+     * @var int
+     */
     private $dimension;
 
+    /**
+     * Turno del juego
+     * @var string
+     */
     private $turno;
 
+    /**
+     * Cantidad de turnos jugados
+     * @var int
+     */
     private $cantJugado;
 
+    /**
+     * Cantidad minima de turnos antes de verficar un ganador
+     * @var int
+     */
     private $minJuegos;
 
+    /**
+     * Inicializar
+     * @param int $dimension
+     */
     public function __construct($dimension = 3)
     {
         // $this->tablero = [[null, null, null], [null, null, null], [null, null, null]];
@@ -30,6 +50,9 @@ class TatetiJuego
         $this->turno = 'x';
     }
 
+    /**
+     * Generar tablero de juego
+     */
     private function generarTablero()
     {
         $tablero = [];
@@ -43,6 +66,11 @@ class TatetiJuego
         $this->tablero = $tablero;
     }
 
+    /**
+     * Marcar una celda del tablero
+     * @param  array $celda [description]
+     * @return bool true si se marcó, false en caso contrario
+     */
     public function marcar($celda)
     {
         list($fila, $columna) = $celda;
@@ -57,6 +85,10 @@ class TatetiJuego
 
     }
 
+    /**
+     * Verificar si hay un ganador
+     * @return array
+     */
     public function checkGanador() {
         if ($this->cantJugado < $this->minJuegos) {
             return ['ganador' => false];

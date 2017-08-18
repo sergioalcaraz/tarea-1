@@ -7,6 +7,7 @@ use Ratchet\Http\HttpServer;
 use Ratchet\WebSocket\WsServer;
 use MyApp\TatetiService;
 
+// Crear una instancia del servidor para WebSocket
 $server = IoServer::factory(
     new HttpServer(
         new WsServer(
@@ -17,4 +18,5 @@ $server = IoServer::factory(
     '127.0.0.1'
 );
 
+// Corre el servidor
 $server->run();
