@@ -1,0 +1,95 @@
+
+* {
+	box-sizing: border-box;
+}
+body {
+	padding-top: 2em;
+	background-color: #ededed;
+	color: #333;
+	text-align: center;
+	margin: 0 auto;
+	font-family: sans-serif;
+}
+ul, li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 0;
+}
+#tablero {
+	width: 312px;
+	margin: 0 auto;
+}
+li {
+	display: inline-block;
+}
+.celda {
+	border: 2px solid #777;
+	margin: 2px;
+	background: #fff;
+	height: 100px;
+	width: 100px;
+	font-size: 100px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+}
+.celda-marcado-x {
+	background-color: #dfdd24;
+}
+.celda-marcado-o {
+	background-color: #0ea64b;
+}
+
+.celda.marcable:hover {
+	background-color: #b2f2f9;
+}
+.resultado {
+	font-weight: bold;
+	font-size: 30px;
+	margin: 40px auto;
+	display: block;
+}
+
+.jugador-x {
+	border: 2px solid #777;
+	margin: 2px;
+	background-color: #dfdd24;
+	height: 50px;
+	width: 50px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.jugador-o {
+	border: 2px solid #777;
+	margin: 2px;
+	background-color: #0ea64b;
+	height: 50px;
+	width: 50px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.btn-juego {
+	border: none;
+	border-radius: 10px;
+	font-size: 20px;
+	background-color: #f14e08;
+	color: #fff;
+	padding: 10px 20px;
+	-webkit-transition: background 2s ease-in-out;
+	-moz-transition: background 2s ease-in-out;
+	-ms-transition: background 2s ease-in-out;
+	-o-transition: background 2s ease-in-out;
+	transition: background 2s ease-in-out;
+}
+
+.btn-juego:hover {
+	background-color: #a70505;
+}
+
+#info-turno {
+	font-size: 20px;
+	display: inline-block;
+}
