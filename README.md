@@ -17,4 +17,4 @@ El sistema puede asumir que el primer jugador que se "conecta" al web socket es 
 ### Instrucciones
 - Instalar las dependencias del proyecto: `composer install`.
 - Correr el servidor web Apache
-- Correr el servidor para WebSocket `/directorio/del/proyecto/bin/server.php`
+- Correr el servidor para WebSocket `php /directorio/del/proyecto/bin/server.php`
